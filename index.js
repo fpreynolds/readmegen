@@ -64,7 +64,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Choose ma license',
-        choices: ['Open', 'ISC', 'GNU', 'MIT', 'Mozilla'],
+        choices: ['ISC', 'GNU', 'MIT', 'Mozilla', 'none'],
         validate: inputLicense => {
             if (inputLicense) {
                 return true;
