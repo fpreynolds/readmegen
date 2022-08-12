@@ -4,6 +4,11 @@
 ## Description
 Generates a professional README markdown file.
 
+Link to repo: https://github.com/fpreynolds/readmegen
+
+Link to demo:
+https://github.com/fpreynolds/readmegen
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
