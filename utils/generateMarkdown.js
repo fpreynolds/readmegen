@@ -28,10 +28,9 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license === 'none') {
-    return "";
+    return "No License";
   } else {
-    return `## License
-    Licensed by ${license}`;
+    return `Licensed by ${license}`;
   };
 };
 
@@ -46,10 +45,10 @@ ${data.description}
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- ${renderLicenseLink(data.license)}
+- [License](#license)
 - [Contribution Guidelines](#contribution-guidelines)
 - [Testing](#testing)
--[Questions](#questions)
+- [Questions](#questions)
 
 ## Installation
 ${data.installation}
@@ -57,6 +56,7 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
+## License
 ${renderLicenseSection(data.license)}
 
 ## Contribution Guidelines
