@@ -6,34 +6,6 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
     {
         type: 'input',
-        name: 'github',
-        message: 'What`s your Github username?',
-        validate: inputName => {
-            if (inputName) {
-                return true;
-            } else {
-                console.log('invalid entry');
-                return false;
-            }
-
-        }
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What`s your email address?',
-        validate: inputEmail => {
-            if (inputEmail) {
-                return true;
-            } else {
-                console.log('invalid entry');
-                return false;
-            }
-
-        }
-    },
-    {
-        type: 'input',
         name: 'project',
         message: 'What`s the name of your project?',
         validate: inputProject => {
@@ -61,9 +33,37 @@ const questions = [
         }
     },
     {
+        type: 'input',
+        name: 'installation',
+        message: 'How should this application be installed?',
+        validate: inputInstallation => {
+            if (inputInstallation) {
+                return true;
+            } else {
+                console.log('invalid entry');
+                return false;
+            }
+            
+        }
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Give a brief description of the usage of the project',
+        validate: inputUsage => {
+            if (inputUsage) {
+                return true;
+            } else {
+                console.log('invalid entry');
+                return false;
+            }
+            
+        }
+    },
+    {
         type: 'list',
         name: 'license',
-        message: 'Choose ma license',
+        message: 'Choose a license',
         choices: ['ISC', 'GNU', 'MIT', 'Mozilla', 'none'],
         validate: inputLicense => {
             if (inputLicense) {
@@ -74,7 +74,63 @@ const questions = [
             }
 
         }
-    }
+    },
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'How should one contribute to this project?',
+        validate: inputContribution => {
+            if (inputContribution) {
+                return true;
+            } else {
+                console.log('invalid entry');
+                return false;
+            }
+
+        }
+    },
+    {
+        type: 'input',
+        name: 'testing',
+        message: 'How will this be tested?',
+        validate: inputTesting => {
+            if (inputTesting) {
+                return true;
+            } else {
+                console.log('invalid entry');
+                return false;
+            }
+
+        }
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What`s your Github username?',
+        validate: inputName => {
+            if (inputName) {
+                return true;
+            } else {
+                console.log('invalid entry');
+                return false;
+            }
+    
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What`s your email address?',
+        validate: inputEmail => {
+            if (inputEmail) {
+                return true;
+            } else {
+                console.log('invalid entry');
+                return false;
+            }
+    
+        }
+    },
 ];
 
 // TODO: Create a function to write README file
